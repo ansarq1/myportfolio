@@ -1,0 +1,152 @@
+$primary-color: #4e47a8;
+$secondary-color: #082461;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav{
+    background-color: $primary-color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 10vh;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.drpdown-btn{
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.drop-content{
+    display: none;
+    position: absolute;
+    background-color: $primary-color;
+    min-width: 132px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.drop-content a{
+    color: white;
+    text-decoration: none;
+    padding: 12px 6px;
+    display: block;
+}
+
+.drop-content a:hover{
+    background-color: $secondary-color;
+}
+
+.drpdown-btn:hover .drop-content{
+    display: block;
+}
+
+.drop-btn{
+    color: whitesmoke;
+    background-color: $primary-color;
+    border-style: none;
+    font-size: 1.2rem;
+    margin: 1vh 9vh 0 0;
+}
+
+.drop-btn:hover{
+    background-color: #544eaace;
+    opacity: 0.8;
+    transition: 0.15s;
+}
+
+.circles ul{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.circles ul li{
+    margin: 0 14px
+}
+
+.logo{
+    height: 5vh;
+    width: 5vh;
+    filter: grayscale(100%);
+}
+
+.logo:hover{
+    opacity: 0.6;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#926aef, $secondary-color);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image img{
+    height: 150px;
+    width: 150px;
+    border-radius: 75px;
+}
+
+.details{
+    text-align: center;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.details h1{
+    font-size: 2.5rem;
+}
+
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.projects button{
+    width: 34vw;
+    height: 8vh;
+    border-radius: 10px;
+    border-style: none;
+    color: $primary-color;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 540px) {
+    .drop-btn{
+        margin: 0 4vh 0 0;
+        font-size: 1.1rem;
+    }
+
+    .circles ul li{
+        margin: 0 6px;
+    }
+
+    .projects button{
+        font-size: 1rem;
+        width: 60vw;
+    }
+
+}
+
+@media screen and (min-width: 540px) and (max-width: 780px) {
+    
+}
