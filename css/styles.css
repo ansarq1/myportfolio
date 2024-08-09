@@ -25,20 +25,21 @@
   display: none;
   position: absolute;
   background-color: #4e47a8;
-  min-width: 132px;
+  min-width: 19vh;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
-
 .drop-content a {
   color: white;
   text-decoration: none;
   padding: 12px 6px;
   display: block;
+  transition-duration: 0.7s;
 }
-
 .drop-content a:hover {
   background-color: #082461;
+  cursor: pointer;
+  transform: translateX(-20px);
 }
 
 .drpdown-btn:hover .drop-content {
@@ -110,23 +111,6 @@
   font-size: 2.5rem;
 }
 
-.projects {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  gap: 1vh;
-}
-
-.projects button {
-  width: 34vw;
-  height: 8vh;
-  border-radius: 10px;
-  border-style: none;
-  color: #4e47a8;
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-
 @media screen and (max-width: 540px) {
   .drop-btn {
     margin: 0 4vh 0 0;
@@ -135,9 +119,8 @@
   .circles ul li {
     margin: 0 6px;
   }
-  .projects button {
-    font-size: 1rem;
-    width: 60vw;
+  .drop-content {
+    min-width: 12vh;
   }
 }
 
