@@ -33,6 +33,7 @@ $secondary-color: #082461;
     min-width: 19vh;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    margin: 0.5vh 0 0 0.4vh;
 
     a{
         color: white;
@@ -52,6 +53,7 @@ $secondary-color: #082461;
 
 .drpdown-btn:hover .drop-content{
     display: block;
+    transition-duration: 0.7s;
 }
 
 .drop-btn{
@@ -121,6 +123,37 @@ $secondary-color: #082461;
 
 //index.html until here
 
+//bio.html
+.bio-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: linear-gradient(#926aef, $secondary-color);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .bio{
+        background-color: rgba(43, 42, 42, 0.247);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        text-align: justify;
+        color: antiquewhite;
+        padding: 20px 30px;
+        border-radius: 10px;
+    }
+
+    div{
+        width: 45%;
+        text-align: center;
+        img{
+            filter: drop-shadow(-11px 15px 12px #2c2b2b);
+        }
+    }
+}
+
 @media screen and (max-width: 540px) {
     .drop-btn{
         margin: 0 4vh 0 0;
@@ -133,6 +166,26 @@ $secondary-color: #082461;
 
     .drop-content{
         min-width: 12vh;
+    }
+
+    .bio-container{
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        overflow-y: scroll;
+        justify-content: center;
+        align-items: center;
+
+        .images{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+        }
+
+        img{
+            width: 80vw;
+        }
     }
 
 }
