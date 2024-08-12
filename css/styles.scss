@@ -8,6 +8,7 @@ $secondary-color: #082461;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    scrollbar-width: 0;
 }
 
 .topnav{
@@ -130,7 +131,7 @@ $secondary-color: #082461;
     align-items: center;
     background-image: linear-gradient(#926aef, $secondary-color);
     width: 100%;
-    height: 100%;
+    height: 90%;
     position: fixed;
     flex-direction: row;
     flex-wrap: wrap;
@@ -176,20 +177,53 @@ $secondary-color: #082461;
         justify-content: center;
         align-items: center;
 
+        .bio{
+            width: 80vw;
+        }
+
         .images{
             display: flex;
             justify-content: center;
             align-items: center;
             justify-items: center;
         }
-
-        img{
-            width: 80vw;
-        }
     }
 
 }
 
 @media screen and (min-width: 540px) and (max-width: 780px) {
-    
+
+    .drop-btn{
+        margin: 0 4vh 0 0;
+        font-size: 1.3rem;
+    }
+
+    .circles ul li{
+        margin: 0 10px;
+    }
+
+    .drop-content{
+        min-width: 12vh;
+    }
+
+
+    .bio-container{
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        overflow-y: scroll;
+        justify-content: center;
+        align-items: center;
+
+        .bio{
+            width: 80vw;
+        }
+
+        .images{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+        }
+    }
 }
