@@ -116,10 +116,33 @@ $secondary-color: #082461;
     display: flex;
     flex-direction: column;
     gap: 1vh;
+    width: 311px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid whitesmoke;
+    animation: typing 2s steps(12, end), cursor .2s steps(12, end) infinite, remove-border 0.1s 2s forwards;
 }
 
 .details h1{
     font-size: 2.5rem;
+} 
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes remove-border{
+    to {
+        border-right: none;
+    }
 }
 
 //index.html until here
