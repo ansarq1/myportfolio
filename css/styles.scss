@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $primary-color: #4e47a8;
 $secondary-color: #082461;
 
@@ -250,4 +251,257 @@ $secondary-color: #082461;
             justify-items: center;
         }
     }
+=======
+$primary-color: #4e47a8;
+$secondary-color: #082461;
+
+//index.html
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    scrollbar-width: 0;
+}
+
+.topnav{
+    background-color: $primary-color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 10vh;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.drpdown-btn{
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.drop-content{
+    display: none;
+    position: absolute;
+    background-color: $primary-color;
+    min-width: 19vh;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin: 0.5vh 0 0 0.4vh;
+
+    a{
+        color: white;
+        text-decoration: none;
+        padding: 12px 6px;
+        display: block;
+        transition-duration: 0.7s;
+    }
+
+    a:hover{
+        background-color: $secondary-color;
+        cursor: pointer;
+        transform: translateX(-20px);
+    }
+}
+
+
+.drpdown-btn:hover .drop-content{
+    display: block;
+    transition-duration: 0.7s;
+}
+
+.drop-btn{
+    color: whitesmoke;
+    background-color: $primary-color;
+    border-style: none;
+    font-size: 1.2rem;
+    margin: 1vh 9vh 0 0;
+}
+
+.drop-btn:hover{
+    background-color: #544eaace;
+    opacity: 0.8;
+    transition: 0.15s;
+}
+
+.circles ul{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.circles ul li{
+    margin: 0 14px
+}
+
+.logo{
+    height: 5vh;
+    width: 5vh;
+    filter: grayscale(100%);
+}
+
+.logo:hover{
+    opacity: 0.6;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#926aef, $secondary-color);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image img{
+    height: 150px;
+    width: 150px;
+    border-radius: 75px;
+}
+
+.details{
+    text-align: center;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    width: 311px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid whitesmoke;
+    animation: typing 2s steps(12, end), cursor .2s steps(12, end) infinite, remove-border 0.1s 2s forwards;
+}
+
+.details h1{
+    font-size: 2.5rem;
+} 
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes remove-border{
+    to {
+        border-right: none;
+    }
+}
+
+//index.html until here
+
+//bio.html
+.bio-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: linear-gradient(#926aef, $secondary-color);
+    width: 100%;
+    height: 90%;
+    position: fixed;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .bio{
+        background-color: rgba(43, 42, 42, 0.247);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        text-align: justify;
+        color: antiquewhite;
+        padding: 20px 30px;
+        border-radius: 10px;
+    }
+
+    div{
+        width: 45%;
+        text-align: center;
+        img{
+            filter: drop-shadow(-11px 15px 12px #2c2b2b);
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .drop-btn{
+        margin: 0 4vh 0 0;
+        font-size: 1.1rem;
+    }
+
+    .circles ul li{
+        margin: 0 6px;
+    }
+
+    .drop-content{
+        min-width: 12vh;
+    }
+
+    .bio-container{
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        overflow-y: scroll;
+        justify-content: center;
+        align-items: center;
+
+        .bio{
+            width: 80vw;
+        }
+
+        .images{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+        }
+    }
+
+}
+
+@media screen and (min-width: 540px) and (max-width: 780px) {
+
+    .drop-btn{
+        margin: 0 4vh 0 0;
+        font-size: 1.3rem;
+    }
+
+    .circles ul li{
+        margin: 0 10px;
+    }
+
+    .drop-content{
+        min-width: 12vh;
+    }
+
+
+    .bio-container{
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        overflow-y: scroll;
+        justify-content: center;
+        align-items: center;
+
+        .bio{
+            width: 80vw;
+        }
+
+        .images{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+        }
+    }
+>>>>>>> cf571df6ea3fb732bb2c3c81548950ee6a720376
 }
